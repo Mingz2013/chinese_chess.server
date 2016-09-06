@@ -1,11 +1,9 @@
 # -*- coding:utf-8 -*-
 __author__ = 'zhaojm'
 
-
-
 from flask import Blueprint, render_template
 
-main = Blueprint('index', __name__)  # url_prefix='/h5'
+main = Blueprint('index', __name__)
 
 
 @main.errorhandler(404)
@@ -15,11 +13,15 @@ def page_not_found():
 
 
 @main.route('/', methods=['GET'])
-@main.route('/h5/', methods=['GET'])
 def index():
     return render_template("index.html")
 
 
-    # @main.route('/debug/', methods=['GET'])
-    # def h5_debug():
-    #     return render_template("debug.html")
+@main.route('/chat', methods=['GET'])
+def chat():
+    return render_template("chat.html")
+
+
+@main.route('/game', methods=['GET'])
+def game():
+    return render_template("game.html")
