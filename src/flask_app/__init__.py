@@ -48,10 +48,10 @@ def register_routes(app):
         if bp and isinstance(bp, Blueprint):
             app.register_blueprint(bp)
 
-    @app.errorhandler(403)
-    def page_403(error):
-        app.logger.error("403")
-        return jsonify({"error": "Auth error"}), 403
+            # @app.errorhandler(403)
+            # def page_403(error):
+            #     app.logger.error("403")
+            #     return jsonify({"error": "Auth error"}), 403
 
         # @app.before_request
         # def before_request():

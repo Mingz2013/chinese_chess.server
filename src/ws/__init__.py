@@ -18,3 +18,4 @@ def create_ws_resource():
     wsFactory = WebSocketServerFactory(u"ws://127.0.0.1:8080")
     wsFactory.protocol = EchoServerProtocol
     wsResource = WebSocketResource(wsFactory)
+    return wsResource
