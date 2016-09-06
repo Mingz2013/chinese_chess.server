@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='chat_app/chat.0.1.js') }}"></script>
+</head>
+<body>
+<h1>WebSocket Echo</h1>
+<noscript>You must enable JavaScript</noscript>
+
+<pre id="log" style="height: 20em; overflow-y: scroll; background-color: #faa;"></pre>
+<form>
+    <p>Message: <input id="message" type="text" size="50" maxlength="50" value="Hello, world!"></p>
+</form>
+<button onclick='send();'>Send Message</button>
+
+</body>
+</html>
