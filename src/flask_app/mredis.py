@@ -1,5 +1,7 @@
-# coding=utf-8
-__author__ = 'Van'
+# -*- coding:utf-8 -*-
+__author__ = 'zhaojm'
+
+
 
 from flask import current_app
 import redis

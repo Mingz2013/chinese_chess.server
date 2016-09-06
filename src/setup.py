@@ -22,14 +22,14 @@ if __name__ == "__main__":
 
     log.startLogging(sys.stdout)
 
-    from game_app import create_ws_resource
-    from site_app import create_app
+    from ws import create_ws_resource
+    from flask_app import create_app
 
-    site_app = create_app('default')
+    flask_app = create_app('default')
     ws_resource = create_ws_resource()
 
     # create a Twisted Web WSGI resource for our Flask server
-    wsgiResource = WSGIResource(reactor, reactor.getThreadPool(), site_app)
+    wsgiResource = WSGIResource(reactor, reactor.getThreadPool(), flask_app)
 
     # create a root resource serving everything via WSGI/Flask, but
     # the path "/ws" served by our WebSocket stuff
