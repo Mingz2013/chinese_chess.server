@@ -3,7 +3,7 @@ __author__ = 'zhaojm'
 
 from flask import Blueprint, render_template
 
-main = Blueprint('index', __name__)
+main = Blueprint('index_controller', __name__)
 
 
 @main.errorhandler(404)
