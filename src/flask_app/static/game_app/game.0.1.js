@@ -7,9 +7,9 @@ window.onload = function () {
     ellog = document.getElementById('log');
     var wsuri;
     if (window.location.protocol === "file:") {
-        wsuri = "ws://127.0.0.1:8080/ws_chat";
+        wsuri = "ws://127.0.0.1:8080/ws_game";
     } else {
-        wsuri = "ws://" + window.location.hostname + ":8080/ws_chat";
+        wsuri = "ws://" + window.location.hostname + ":8080/ws_game";
     }
     if ("WebSocket" in window) {
         sock = new WebSocket(wsuri);

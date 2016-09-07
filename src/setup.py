@@ -22,18 +22,26 @@ if __name__ == "__main__":
 
     log.startLogging(sys.stdout)
 
-    from ws import create_ws_resource
+    from ws.chat_app import create_chat_ws_resource
+    from ws.game_app import create_game_ws_resource
     from flask_app import create_app
 
     flask_app = create_app('default')
-    ws_resource = create_ws_resource()
+    chat_ws_resource = create_chat_ws_resource()
+    game_ws_resource = create_game_ws_resource()
 
     # create a Twisted Web WSGI resource for our Flask server
     wsgiResource = WSGIResource(reactor, reactor.getThreadPool(), flask_app)
 
     # create a root resource serving everything via WSGI/Flask, but
     # the path "/ws" served by our WebSocket stuff
-    rootResource = WSGIRootResource(wsgiResource, {'ws': ws_resource})
+    rootResource = WSGIRootResource(
+        wsgiResource,
+        {
+            'ws_chat': chat_ws_resource,
+            'ws_game': game_ws_resource
+        }
+    )
 
     # create a Twisted Web Site and run everything
     site = Site(rootResource)
