@@ -1,1 +1,1 @@
-# chinese_chess.server
+# mingz.server
