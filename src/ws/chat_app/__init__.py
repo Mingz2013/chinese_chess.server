@@ -22,8 +22,8 @@ class ChatWSServerProtocol(WebSocketServerProtocol):
         else:
             print("Text message received: {}".format(payload.decode('utf8')))
 
-            obj = json.loads(payload.decode('utf8'))
-            payload = json.dumps(obj, ensure_ascii=False).encode('utf8')
+            # obj = json.loads(payload.decode('utf8'))
+            # payload = json.dumps(obj, ensure_ascii=False).encode('utf8')
 
         ## echo back message verbatim
         self.sendMessage(payload, isBinary)

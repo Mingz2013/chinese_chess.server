@@ -19,9 +19,14 @@ def index():
 
 @main.route('/chat', methods=['GET'])
 def chat():
-    return render_template("chat/index.html")
+    return render_template("chat_3.html")
 
 
 @main.route('/game', methods=['GET'])
 def game():
-    return render_template("game/index.html")
+    return render_template("game.html")
+
+
+@main.route('/admin', methods=['GET'])
+def admin():
+    return render_template("admin.html")

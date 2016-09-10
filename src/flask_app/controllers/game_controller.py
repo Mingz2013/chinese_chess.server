@@ -3,7 +3,7 @@ __author__ = 'zhaojm'
 
 from flask import Blueprint, render_template
 
-api = Blueprint('game_controller', __name__, url_prefix='/game')
+api = Blueprint('game_controller', __name__, url_prefix='/game_2')
 
 #
 # @api.route('/', methods=['GET'])
