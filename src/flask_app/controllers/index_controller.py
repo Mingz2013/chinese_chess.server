@@ -22,6 +22,11 @@ def chat():
     return render_template("chat_3.html")
 
 
+@main.route('/blog', methods=['GET'])
+def chat():
+    return render_template("blog.html")
+
+
 @main.route('/game', methods=['GET'])
 def game():
     return render_template("game.html")
