@@ -7,7 +7,7 @@ module.exports = {
     entry: [path.resolve(ROOT_PATH, 'app/containers/app.js')],
 
     output: {
-        path: path.resolve(ROOT_PATH, '../dist'),
+        path: path.resolve(ROOT_PATH, 'dist'),
         filename: 'chat.js'
     },
 
