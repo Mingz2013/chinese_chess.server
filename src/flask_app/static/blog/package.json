@@ -1,5 +1,5 @@
 {
-  "name": "chat",
+  "name": "blog",
   "version": "1.0.0",
   "description": "a demo",
   "main": "webpack.config.js",
