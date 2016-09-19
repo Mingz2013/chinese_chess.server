@@ -19,11 +19,11 @@ def index():
 
 @main.route('/chat', methods=['GET'])
 def chat():
-    return render_template("chat_3.html")
+    return render_template("chat.html")
 
 
 @main.route('/blog', methods=['GET'])
-def chat():
+def blog():
     return render_template("blog.html")
 
 
