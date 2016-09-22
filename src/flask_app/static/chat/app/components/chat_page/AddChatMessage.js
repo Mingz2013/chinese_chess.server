@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-export default class AddChat extends Component {
+export default class AddChatMessage extends Component {
     render() {
         return (
             <div>

@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { changePage, addChat } from '../actions/index'
-import Login from '../components/login/Login'
-import AddChat from '../components/AddChat'
-import ChatList from '../components/ChatList'
+import LoginPage from '../components/login/LoginPage'
+import MainPage from '../components/main/MainPage'
+
 import { LOGIN, MAIN } from '../constants/PageTypes'
 
 class App extends Component {
@@ -15,16 +15,13 @@ class App extends Component {
                 {
                     page_type == LOGIN ?
                         (
-                            <div>
-                                <Login onLoginClick={(username, password) => dispatch(changePage(MAIN))}/>
-                            </div>
+
+                            <LoginPage onLoginClick={(username, password) => dispatch(changePage(MAIN))}/>
+
                         )
                         :
                         (
-                            <div>
-                                <ChatList chats={chats}/>
-                                <AddChat onAddClick={text => dispatch(addChat(text))}/>
-                            </div>
+                            <MainPage dispatch={dispatch} chats={chats}/>
                         )
                 }
             </div>
