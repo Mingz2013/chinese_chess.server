@@ -1,10 +1,10 @@
 import { CHANGE_PAGE } from '../constants/ActionTypes'
-import { LOGIN } from '../constants/PageTypes'
+import { PAGE_LOGIN } from '../constants/PageIndex'
 
-export function page_type(state = LOGIN, action) {
+export function page_index(state = PAGE_LOGIN, action) {
     switch (action.type) {
         case CHANGE_PAGE:
-            return action.page;
+            return action.page_index;
         default:
             return state
     }

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-export default class AddChatMessage extends Component {
+export default class SendChatMessage extends Component {
     render() {
         return (
             <div>
@@ -15,7 +15,7 @@ export default class AddChatMessage extends Component {
     handleClick(e) {
         const node = this.refs.input;
         const text = node.value.trim();
-        this.props.onAddClick(text);
+        this.props.onSendClick(text);
         node.value = ''
     }
 }

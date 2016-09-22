@@ -3,7 +3,9 @@
  */
 import React, { Component, PropTypes } from 'react'
 
-import Chat from './chat/Chat'
+import AccountTab from './account_tab/AccountTab'
+import FriendsListTab from './friends_list_tab/FriendsListTab'
+import MessageTab from './message_tab/MessageTab'
 import BottomTabs from './BottomTabs'
 
 export default class MainPage extends Component {
@@ -12,7 +14,9 @@ export default class MainPage extends Component {
 
         return (
             <div>
-                <Chat/>
+                <AccountTab/>
+                <FriendsListTab/>
+                <MessageTab/>
                 <BottomTabs />
             </div>
         )

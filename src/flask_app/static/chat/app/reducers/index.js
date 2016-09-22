@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux'
-import { chats } from './chats'
-import {page_type} from './page_type'
+import { chat_messages } from './chat_messages'
+import {page_index} from './page_index'
 
 const rootReducer = combineReducers({
-    page_type,
-    chats
+    chat_messages,
+    page_index
 });
 
 export default rootReducer

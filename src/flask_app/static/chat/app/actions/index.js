@@ -1,11 +1,11 @@
-import { CHANGE_PAGE, ADD_CHAT } from '../constants/ActionTypes'
+import { CHANGE_PAGE, SEND_CHAT_MESSAGE } from '../constants/ActionTypes'
 
-export const addChat = (text) => ({
-    type: ADD_CHAT,
-    text
+export const sendChatMessage = (message) => ({
+    type: SEND_CHAT_MESSAGE,
+    message
 });
 
-export const changePage = (page) => ({
+export const changePage = (page_index) => ({
     type: CHANGE_PAGE,
-    page
+    page_index
 });
