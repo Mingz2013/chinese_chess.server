@@ -1,12 +1,23 @@
-import React from 'react';
-import { render } from 'react-dom';
-import Hello from '../components/hello';
+import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux'
+import { addChat } from '../actions'
+import AddChat from '../components/AddChat'
+import ChatList from '../components/ChatList'
 
-function main() {
-    render(
-        <Hello name="mingz"/>,
-        document.getElementById('app')
-    );
+class App extends Component {
+    render() {
+        const { dispatch, chats } = this.props;
+        return (
+            <div>
+                <ChatList chats={chats}/>
+                <AddChat onAddClick={text => dispatch(addChat(text))}/>
+            </div>
+        )
+    }
 }
 
-main();
+let mapStateToProps = (state) => ({
+    chats: state.chats
+});
+
+export default connect(mapStateToProps)(App)

@@ -4,11 +4,11 @@ var ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
 
-    entry: [path.resolve(ROOT_PATH, 'app/containers/app.js')],
+    entry: [path.resolve(ROOT_PATH, 'app/index.js')],
 
     output: {
         path: path.resolve(ROOT_PATH, 'dist'),
-        filename: 'blog.js'
+        filename: 'bundle.js'
     },
 
     resolve: {

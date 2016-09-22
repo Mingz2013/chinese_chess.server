@@ -1,3 +1,16 @@
-/**
- * Created by zhaojm on 9/19/16.
- */
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import App from './containers/App'
+import chatApp from './reducers'
+import { createStore } from 'redux'
+
+let store = createStore(chatApp);
+
+let rootElement = document.getElementById('app');
+render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    rootElement
+)
