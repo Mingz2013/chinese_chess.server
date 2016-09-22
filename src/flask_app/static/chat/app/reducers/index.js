@@ -2,9 +2,9 @@ import { combineReducers } from 'redux'
 import { chats } from './chats'
 import {change_page} from './change_page'
 
-const chatApp = combineReducers({
+const rootReducer = combineReducers({
     change_page,
     chats
 });
 
-export default chatApp
+export default rootReducer
