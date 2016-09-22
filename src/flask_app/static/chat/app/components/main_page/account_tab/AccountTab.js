@@ -9,7 +9,7 @@ export default class AccountTab extends Component {
 
         return (
             <div>
-
+                account tab
             </div>
         )
     }

@@ -9,7 +9,7 @@ export default class FriendsListTab extends Component {
 
         return (
             <div>
-
+                friends list tab
             </div>
         )
     }

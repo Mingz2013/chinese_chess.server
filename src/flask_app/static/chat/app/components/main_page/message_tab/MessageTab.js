@@ -9,7 +9,7 @@ export default class MessageTab extends Component {
 
         return (
             <div>
-
+                message tab
             </div>
         )
     }
