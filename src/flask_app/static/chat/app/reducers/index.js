@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 import { chats } from './chats'
-import {change_page} from './change_page'
+import {page_type} from './page_type'
 
 const rootReducer = combineReducers({
-    change_page,
+    page_type,
     chats
 });
 
