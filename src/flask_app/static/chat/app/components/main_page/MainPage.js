@@ -35,6 +35,7 @@ export default class MainPage extends Component {
 
     changeTab(tab) {
         const { dispatch } = this.props;
+        console.log(tab);
         dispatch(changeTab(tab))
     }
 }

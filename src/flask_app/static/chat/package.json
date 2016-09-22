@@ -1,7 +1,7 @@
 {
-  "name": "react.redux.es2015.demo",
+  "name": "chat",
   "version": "1.0.0",
-  "description": "a demo",
+  "description": "chat",
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
