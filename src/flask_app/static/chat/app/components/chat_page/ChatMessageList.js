@@ -5,7 +5,7 @@ export default class ChatMessageList extends Component {
     render() {
 
         return (
-            <ul>
+            <ul className="chat-box">
                 {this.props.chat_messages.map((message, index) =>
                     <ChatMessage {...message}
                         key={index}
