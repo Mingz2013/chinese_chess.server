@@ -20,7 +20,6 @@ export default class Socket {
             this.sock.onmessage = this.onMessage;
             this.sock.onerror = this.onError;
         }
-
     }
 
     onOpen(e) {
