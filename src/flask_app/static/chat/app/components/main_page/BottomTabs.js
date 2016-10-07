@@ -9,7 +9,7 @@ export default class BottomTabs extends Component {
 
         const { changeTab } = this.props;
         return (
-            <div>
+            <div className="page-button">
                 <span onClick={(e) => {changeTab(TAB_MESSAGE)}}>message</span>
                 <span onClick={(e) => {changeTab(TAB_FRIENDS_LIST)}}>friends</span>
                 <span onClick={(e) => {changeTab(TAB_ACCOUNT)}}>account</span>

@@ -6,10 +6,10 @@ import React, { Component, PropTypes } from 'react'
 export default class LoginPage extends Component {
     render() {
         return (
-            <div>
-                <h1>Login</h1>
-                username: <input type='text' ref='username'/><br/>
-                password: <input type='text' ref='password'/><br/>
+            <div className="login">
+                <h1 className="login-mane">Login</h1>
+                <input type='text' ref='username' placeholder="用户名"/>
+                <input type='text' ref='password' placeholder="密码"/>
                 <button onClick={(e) => this.handleClick(e)}>
                     login
                 </button>

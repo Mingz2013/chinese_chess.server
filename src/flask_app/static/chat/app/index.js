@@ -22,7 +22,7 @@ const store = configureStore();
 let rootElement = document.getElementById('app');
 render(
     <Provider store={store}>
-        <div>
+        <div className="height-init">
             <App />
             <DevTools />
         </div>

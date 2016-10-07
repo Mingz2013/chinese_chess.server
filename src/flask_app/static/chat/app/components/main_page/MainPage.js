@@ -16,7 +16,7 @@ export default class MainPage extends Component {
 
         const { tab_index } = this.props;
         return (
-            <div>
+            <div className="main">
                 {
                     tab_index == TAB_MESSAGE ? (
                         <MessageTab/>

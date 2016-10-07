@@ -12,7 +12,7 @@ class App extends Component {
         const { dispatch, page_index, tab_index, chat_messages } = this.props;
 
         return (
-            <div>
+            <div className="height-init">
                 {
                     page_index == PAGE_LOGIN ? (
                         <LoginPage onLoginClick={(username, password) => dispatch(changePage(PAGE_MAIN))}/>

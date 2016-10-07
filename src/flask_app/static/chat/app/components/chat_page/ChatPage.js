@@ -12,7 +12,7 @@ export default class ChatPage extends Component {
     render() {
         const { dispatch, chat_messages } = this.props;
         return (
-            <div>
+            <div className="chat">
                 <ChatMessageList chat_messages={chat_messages}/>
                 <SendChatMessage onSendClick={message => dispatch(sendChatMessage(message))}/>
             </div>

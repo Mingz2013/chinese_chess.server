@@ -3,7 +3,7 @@ import React, { Component, PropTypes } from 'react'
 export default class SendChatMessage extends Component {
     render() {
         return (
-            <div>
+            <div className="chat-send">
                 <input type='text' ref='input'/>
                 <button onClick={(e) => this.handleClick(e)}>
                     Add
