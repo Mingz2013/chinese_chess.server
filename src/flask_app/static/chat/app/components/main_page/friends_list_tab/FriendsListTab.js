@@ -8,8 +8,13 @@ export default class FriendsListTab extends Component {
         //const { dispatch, chats } = this.props;
 
         return (
-            <div>
-                friends list tab
+            <div className="main-friends">
+                <div className="friends-item">好友分组</div>
+                <div className="friends-item">好友分组</div>
+                <div className="friends-item">好友分组</div>
+                <div className="friends-item">好友分组</div>
+                <div className="friends-item">好友分组</div>
+            
             </div>
         )
     }
