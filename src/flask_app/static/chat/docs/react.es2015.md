@@ -97,7 +97,7 @@
     };
 
 `npm i react react-dom --save`
-`npm i babel-core babel-loader babel-preset-es2015 babel-preset-react style-loader css-loader url-loader http-server webpack --save-dev`
+`npm i babel-core babel-loader babel-preset-es2015 babel-preset-react style-loader css-loader url-loader file-loader http-server webpack --save-dev`
 `npm run build`
 `npm run start`
 `npm run watch`
