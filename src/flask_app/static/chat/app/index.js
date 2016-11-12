@@ -5,8 +5,8 @@ import configureStore from './store/configureStore'
 import App from './containers/App'
 import rootReducer from './reducers'
 import { createStore, compose } from 'redux'
-import Socket from './socket/socket'
-import ws_uri from 'constants/config'
+//import Socket from './socket/socket'
+//import ws_uri from './constants/config'
 
 //import createStoreWithMiddleware from './store/create'
 
@@ -21,7 +21,7 @@ import DevTools from './containers/DevTools';
 //const store = createStore(rootReducer);
 const store = configureStore();
 
-const socket = Socket(ws_uri);
+//const socket = Socket(ws_uri);
 
 let rootElement = document.getElementById('app');
 render(
