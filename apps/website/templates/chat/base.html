@@ -2,11 +2,18 @@
 
 {% block head %}
     {{ super() }}
-    <script type="text/javascript" src="{{ url_for('static', filename = 'chat/dist/bundle.js') }}"></script>
+
 {% endblock %}
 
 {% block title %}chat{% endblock %}
 
 {% block body %}
-    chat base
+    {% block main %}
+        block main
+    {% endblock %}
+    {% block bottom_script %}
+        <script type="text/javascript" src="{{ url_for('static', filename = 'chat/dist/bundle.js') }}"></script>
+    {% endblock %}
+
 {% endblock %}
+
