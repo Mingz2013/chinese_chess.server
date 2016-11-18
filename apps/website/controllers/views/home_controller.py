@@ -2,17 +2,29 @@
 __author__ = 'zhaojm'
 
 from flask import Blueprint, render_template
-from ...services.api.category_api_service import CategoryAPIService
-from ...services.api.tag_api_service import TagAPIService
+
 
 api = Blueprint('home_controller', __name__, url_prefix='')
 
 
 @api.route('/', methods=['GET'])
 def index():
-    category_list = CategoryAPIService.get_category_list()
-    tag_list = TagAPIService.get_tag_list()
-    return render_template("home/index.html", category_list=category_list, tag_list=tag_list)
+    return render_template("home/index.html")
+
+
+@api.route('/chat', methods=['GET'])
+def chat():
+    return render_template("chat.html")
+
+
+@api.route('/blog', methods=['GET'])
+def blog():
+    return render_template("blog.html")
+
+
+@api.route('/game', methods=['GET'])
+def game():
+    return render_template("game.html")
 
 
 @api.route('/about', methods=['GET'])
