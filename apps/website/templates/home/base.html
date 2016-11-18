@@ -12,7 +12,9 @@
     {% block menubar %}
         <ul>
             <li><a href="{{ url_for('home_controller.index') }}">Home</a></li>
-            <li><a href="{{ url_for('article_controller.article_list_all') }}">Articles</a></li>
+            <li><a href="{{ url_for('blog_controller.index') }}">Blog</a></li>
+            <li><a href="{{ url_for('chat_controller.index') }}">Chat</a></li>
+            <li><a href="{{ url_for('game_controller.index') }}">Game</a></li>
             <li><a href="{{ url_for('home_controller.about') }}">About</a></li>
             <li><a href="{{ url_for('home_controller.contact') }}">Contact</a></li>
             <li>Other wait time..</li>

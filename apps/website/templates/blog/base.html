@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}blog base{% endblock %}
+
+{% block menubar %}
+    <ul>
+        <li><a href="{{ url_for('blog_controller.index') }}">Blog</a></li>
+        {% for category in category_list %}
+            <li>
+                <a href="{{ url_for('blog_controller.article_list_by_category', category=category.title) }}">{{ category.title }}</a>
+            </li>
+        {% endfor %}
+        <li>Other wait time..</li>
+    </ul>
+{% endblock %}
+
+{% block sidebar %}
+    <div id="side_bar">
+        <ul>
+            {% for tag in tag_list %}
+                <li><a href="{{ url_for('blog_controller.article_list_by_tag', tag=tag.title) }}">{{ tag.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul>
+            month list
+        </ul>
+
+    </div>
+{% endblock %}
+
+{% block main %}
+    article base
+{% endblock %}

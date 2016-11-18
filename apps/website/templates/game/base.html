@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {{ super() }}
+    <script type="text/javascript" src="{{ url_for('static', filename = 'game/game.0.1.js') }}"></script>
+{% endblock %}
+
+{% block title %}game{% endblock %}
+
+{% block body %}
+    game base
+{% endblock %}
