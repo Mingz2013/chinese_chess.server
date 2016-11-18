@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     from ws.chat_app import create_chat_ws_resource
     from ws.game_app import create_game_ws_resource
-    from flask_app import create_app
+    from website import create_app
 
     flask_app = create_app('default')
     chat_ws_resource = create_chat_ws_resource()
