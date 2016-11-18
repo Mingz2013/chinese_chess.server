@@ -7,7 +7,7 @@ from ...services.api.article_api_service import ArticleAPIService
 from ...services.api.category_api_service import CategoryAPIService
 from ...services.api.tag_api_service import TagAPIService
 
-api = Blueprint('article_controller', __name__, url_prefix='/article')
+api = Blueprint('blog_controller', __name__, url_prefix='/blog')
 
 
 @api.route('/', methods=['GET'])
