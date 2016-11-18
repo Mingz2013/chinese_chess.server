@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}blog base{% endblock %}
-
+{% block body %}
 {% block menubar %}
     <ul>
         <li><a href="{{ url_for('blog_controller.index') }}">Blog</a></li>
@@ -10,7 +10,7 @@
                 <a href="{{ url_for('blog_controller.article_list_by_category', category=category.title) }}">{{ category.title }}</a>
             </li>
         {% endfor %}
-        <li>Other wait time..</li>
+
     </ul>
 {% endblock %}
 
@@ -30,5 +30,11 @@
 {% endblock %}
 
 {% block main %}
-    article base
+    blog base main
+{% endblock %}
+
+    {% block bottom_script %}
+        <script type="text/javascript" src="{{ url_for('static', filename = 'blog/dist/bundle.js') }}"></script>
+    {% endblock %}
+
 {% endblock %}
