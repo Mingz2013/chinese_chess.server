@@ -14,7 +14,7 @@ def index():
         return redirect(url_for('init_controller.index'))
     if not AdminService.check_is_login():
         return redirect(url_for('.login'))
-    return render_template("admin/main.html")
+    return render_template("admin/index.html")
 
 
 @api.route('/login', methods=['GET'])

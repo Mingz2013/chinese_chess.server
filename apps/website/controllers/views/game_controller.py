@@ -8,4 +8,4 @@ api = Blueprint('game_controller', __name__, url_prefix='/game')
 
 @api.route('/', methods=['GET'])
 def index():
-    return 'game index'
+    return render_template("game/index.html")
