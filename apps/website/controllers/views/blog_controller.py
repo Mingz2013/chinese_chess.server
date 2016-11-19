@@ -12,7 +12,10 @@ api = Blueprint('blog_controller', __name__, url_prefix='/blog')
 
 @api.route('/', methods=['GET'])
 def index():
-    return render_template("blog/index.html")
+    category_list = CategoryAPIService.get_category_list()
+    tag_list = TagAPIService.get_tag_list()
+    article_list = ArticleAPIService.get_article_list()
+    return render_template("blog/index.html", category_list=category_list, tag_list=tag_list, article_list=article_list)
 
 
 @api.route('/list', methods=['GET'])
@@ -20,7 +23,7 @@ def article_list_all():
     category_list = CategoryAPIService.get_category_list()
     tag_list = TagAPIService.get_tag_list()
     article_list = ArticleAPIService.get_article_list()
-    return render_template("home/article/list.html",
+    return render_template("blog/list.html",
                            category_list=category_list, tag_list=tag_list, article_list=article_list)
 
 
@@ -29,7 +32,7 @@ def article_list_by_category(category):
     category_list = CategoryAPIService.get_category_list()
     tag_list = TagAPIService.get_tag_list()
     article_list = ArticleAPIService.get_article_list(category=category)
-    return render_template("home/article/list.html",
+    return render_template("blog/list.html",
                            category_list=category_list, tag_list=tag_list, article_list=article_list)
 
 
@@ -38,7 +41,7 @@ def article_list_by_tag(tag):
     category_list = CategoryAPIService.get_category_list()
     tag_list = TagAPIService.get_tag_list()
     article_list = ArticleAPIService.get_article_list(tag=tag)
-    return render_template("home/article/list.html",
+    return render_template("blog/list.html",
                            category_list=category_list, tag_list=tag_list, article_list=article_list)
 
 
@@ -47,7 +50,7 @@ def article_list_by_month(month):
     category_list = CategoryAPIService.get_category_list()
     tag_list = TagAPIService.get_tag_list()
     article_list = ArticleAPIService.get_article_list(month=month)
-    return render_template("home/article/list.html",
+    return render_template("blog/list.html",
                            category_list=category_list, tag_list=tag_list, article_list=article_list)
 
 
@@ -56,5 +59,5 @@ def article_detail(article_id):
     category_list = CategoryAPIService.get_category_list()
     tag_list = TagAPIService.get_tag_list()
     article = ArticleAPIService.get_article_detail(article_id)
-    return render_template("home/article/detail.html",
+    return render_template("blog/detail.html",
                            category_list=category_list, tag_list=tag_list, article=article)
