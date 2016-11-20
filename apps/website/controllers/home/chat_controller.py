@@ -8,4 +8,4 @@ api = Blueprint('chat_controller', __name__, url_prefix='/chat')
 
 @api.route('/', methods=['GET'])
 def index():
-    return render_template("chat/index.html")
+    return render_template("home/chat/index.html")

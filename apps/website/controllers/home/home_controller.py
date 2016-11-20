@@ -21,7 +21,6 @@ def about():
 def contact():
     return render_template("home/contact.html")
 
-
-@api.route('/debug', methods=['GET'])
-def debug():
-    return render_template("home/debug.html")
+# @api.route('/debug', methods=['GET'])
+# def debug():
+#     return render_template("home/debug.html")

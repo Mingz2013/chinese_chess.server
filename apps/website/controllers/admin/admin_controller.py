@@ -44,19 +44,19 @@ def user_edit(user_id):
 
 @api.route('/article/list', methods=['GET'])
 def article_list():
-    return render_template("admin/article/list.html")
+    return render_template("admin/blog/list.html")
 
 
 @api.route('/article/add', methods=['GET'])
 def article_add():
-    return render_template("admin/article/add.html")
+    return render_template("admin/blog/add.html")
 
 
 @api.route('/article/detail/<article_id>', methods=['GET'])
 def article_detail(article_id):
-    return render_template("admin/article/detail.html", article_id=article_id)
+    return render_template("admin/blog/detail.html", article_id=article_id)
 
 
 @api.route('/article/edit/<article_id>', methods=['GET'])
 def article_edit(article_id):
-    return render_template("admin/article/edit.html", article_id=article_id)
+    return render_template("admin/blog/edit.html", article_id=article_id)
