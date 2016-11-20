@@ -11,8 +11,10 @@
     {% block menubar %}
         <ul>
             <li><a href="{{ url_for('admin_controller.index') }}">Admin</a></li>
-            <!--<li><a href="{{ url_for('admin_controller.user_list') }}">Users</a></li>-->
-            <li><a href="{{ url_for('admin_controller.article_list') }}">Articles</a></li>
+            <li><a href="{{ url_for('admin_controller.article_list') }}">User</a></li>
+            <li><a href="{{ url_for('admin_controller.user_list') }}">Blog</a></li>
+            <li><a href="{{ url_for('admin_controller.article_list') }}">Chat</a></li>
+            <li><a href="{{ url_for('admin_controller.article_list') }}">Game</a></li>
         </ul>
     {% endblock %}
 
