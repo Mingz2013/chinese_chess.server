@@ -3,8 +3,8 @@ __author__ = 'zhaojm'
 
 from flask import Blueprint, jsonify, request
 
-from ...services.api.article_api_service import ArticleAPIService
-from ...models.article import Article
+from ....services.api.article_api_service import ArticleAPIService
+from ....models.blog.article import Article
 
 api = Blueprint('article_api_controller', __name__, url_prefix='/api/article')
 
