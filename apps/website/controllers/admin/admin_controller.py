@@ -62,21 +62,21 @@ def user_edit(user_id):
     return render_template("admin/user/edit.html", user_id=user_id)
 
 
-@api.route('/article/list', methods=['GET'])
+@api.route('/blog/article/list', methods=['GET'])
 def article_list():
     return render_template("admin/blog/list.html")
 
 
-@api.route('/article/add', methods=['GET'])
+@api.route('/blog/article/add', methods=['GET'])
 def article_add():
     return render_template("admin/blog/add.html")
 
 
-@api.route('/article/detail/<article_id>', methods=['GET'])
+@api.route('/blog/article/detail/<article_id>', methods=['GET'])
 def article_detail(article_id):
     return render_template("admin/blog/detail.html", article_id=article_id)
 
 
-@api.route('/article/edit/<article_id>', methods=['GET'])
+@api.route('/blog/article/edit/<article_id>', methods=['GET'])
 def article_edit(article_id):
     return render_template("admin/blog/edit.html", article_id=article_id)
