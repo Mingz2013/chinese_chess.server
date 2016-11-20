@@ -17,6 +17,26 @@ def index():
     return render_template("admin/index.html")
 
 
+@api.route('/chat', methods=['GET'])
+def chat():
+    return render_template("admin/chat/index.html")
+
+
+@api.route('/game', methods=['GET'])
+def game():
+    return render_template("admin/game/index.html")
+
+
+@api.route('/user', methods=['GET'])
+def user():
+    return render_template("admin/user/index.html")
+
+
+@api.route('/blog', methods=['GET'])
+def blog():
+    return render_template("admin/blog/index.html")
+
+
 @api.route('/login', methods=['GET'])
 def login():
     return render_template("admin/login.html")
