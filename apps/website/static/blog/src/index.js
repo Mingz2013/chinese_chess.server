@@ -7,8 +7,8 @@
 //import 'bootstrap-sass'
 
 
-var $ = window.$ = window.jQuery = require('jquery'),
-    bootstrap = require('bootstrap-sass');
+//var $ = window.$ = window.jQuery = require('jquery'),
+//    bootstrap = require('bootstrap-sass');
 
 import '../css/style.css'
 
