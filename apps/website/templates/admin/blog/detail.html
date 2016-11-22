@@ -3,7 +3,7 @@
 {% block title %}admin article detail{% endblock %}
 
 {% block main %}
-    <div id="article_detail">
+    <div id="article_detail" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <input id="article_id" value="{{ article_id }}" hidden/>
         title: <h1 id="title"></h1><br/>
         content: <p id="content"></p><br/>
@@ -12,7 +12,8 @@
         tags: <span id="tags"></span><br/>
         create time: <span id="create_time"></span><br/>
         update time: <span id="update_time"></span><br/>
-    </div>
     <button id="article_edit_btn">edit</button><br/>
     <button id="article_remove_btn">remove</button><br/>
+    </div>
+
 {% endblock %}

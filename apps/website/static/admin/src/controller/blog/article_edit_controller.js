@@ -39,7 +39,7 @@ class ArticleEditController {
             };
 
             article_service.update_article(article).then((result)=> {
-                location.href = "/admin/article/detail/" + article_id;
+                location.href = "/admin/blog/article/detail/" + article_id;
             }).catch((errmsg)=> {
                 console.log(errmsg);
             });

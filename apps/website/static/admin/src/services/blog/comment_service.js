@@ -13,14 +13,14 @@ class CommentService {
         return ajax_promise({
             type: "POST",
             data: comment,
-            url: "/api/comment/add"
+            url: "/api/blog/comment/add"
         })
     }
 
     get_comment_list() {
         return ajax_promise({
             type: "GET",
-            url: "/api/comment/list"
+            url: "/api/blog/comment/list"
         })
     }
 

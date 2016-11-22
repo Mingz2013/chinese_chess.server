@@ -36,7 +36,7 @@ class ArticleAddController {
             };
             console.log(article);
             article_service.add_article(article).then((article_id)=> {
-                location.href = "/admin/article/detail/" + article_id;
+                location.href = "/admin/blog/article/detail/" + article_id;
             }).catch((errmsg)=> {
                 console.log(errmsg);
             });

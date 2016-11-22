@@ -6,7 +6,7 @@ from flask import Blueprint, jsonify, request
 from ....services.api.category_api_service import CategoryAPIService
 from ....models.blog.category import Category
 
-api = Blueprint('category_api_controller', __name__, url_prefix='/api/category')
+api = Blueprint('category_api_controller', __name__, url_prefix='/api/blog/category')
 
 
 @api.route('/', methods=['GET'])

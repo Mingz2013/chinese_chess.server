@@ -13,14 +13,14 @@ class TagService {
         return ajax_promise({
             type: "POST",
             data: tag,
-            url: "/api/tag/add"
+            url: "/api/blog/tag/add"
         })
     }
 
     get_tag_list() {
         return ajax_promise({
             type: "GET",
-            url: "/api/tag/list"
+            url: "/api/blog/tag/list"
         })
     }
 

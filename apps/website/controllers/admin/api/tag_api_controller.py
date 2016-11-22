@@ -6,7 +6,7 @@ from flask import Blueprint, jsonify, request
 from ....services.api.tag_api_service import TagAPIService
 from ....models.blog.tag import Tag
 
-api = Blueprint('tag_api_controller', __name__, url_prefix='/api/tag')
+api = Blueprint('tag_api_controller', __name__, url_prefix='/api/blog/tag')
 
 
 @api.route('/', methods=['GET'])

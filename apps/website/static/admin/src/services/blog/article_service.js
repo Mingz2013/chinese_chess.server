@@ -14,14 +14,14 @@ class ArticleService {
     get_article_list() {
         return ajax_promise({
             type: "GET",
-            url: "/api/article/list"
+            url: "/api/blog/article/list"
         })
     }
 
     remove_article(article_id) {
         return ajax_promise({
             type: "DELETE",
-            url: "/api/article/remove/" + article_id
+            url: "/api/blog/article/remove/" + article_id
         })
     }
 
@@ -32,14 +32,14 @@ class ArticleService {
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(article),
             dataType: "json",
-            url: "/api/article/add"
+            url: "/api/blog/article/add"
         })
     }
 
     get_article(article_id) {
         return ajax_promise({
             type: "GET",
-            url: "/api/article/detail/" + article_id
+            url: "/api/blog/article/detail/" + article_id
         })
     }
 
@@ -49,7 +49,7 @@ class ArticleService {
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify(article),
             dataType: "json",
-            url: "/api/article/update"
+            url: "/api/blog/article/update"
         })
     }
 

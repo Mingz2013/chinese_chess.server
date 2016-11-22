@@ -4,6 +4,7 @@
 
 import '../css/style.css'
 import '../css/signin.css'
+import '../css/dashboard.css'
 
 import ArticleAddController from './controller/blog/article_add_controller'
 import ArticleDetailController from './controller/blog/article_detail_controller'

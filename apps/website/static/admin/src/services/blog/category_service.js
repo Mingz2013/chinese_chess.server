@@ -13,14 +13,14 @@ class CategoryService {
         return ajax_promise({
             type: "POST",
             data: category,
-            url: "/api/category/add"
+            url: "/api/blog/category/add"
         })
     }
 
     get_category_list() {
         return ajax_promise({
             type: "GET",
-            url: "/api/category/list"
+            url: "/api/blog/category/list"
         })
     }
 
