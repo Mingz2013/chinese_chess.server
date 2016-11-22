@@ -2,8 +2,8 @@
 
 {% block title %}admin user base{% endblock %}
 
-{% block sidebar %}
-    <ul>
+{% block sub_sidebar %}
+    <ul class="nav nav-sidebar">
         <li><a href="{{ url_for('admin_controller.user_list') }}">USER LIST</a></li>
         <li><a href="{{ url_for('admin_controller.user_add') }}">USER ADD</a></li>
     </ul>
