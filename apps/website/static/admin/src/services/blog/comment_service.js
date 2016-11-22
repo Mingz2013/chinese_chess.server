@@ -2,7 +2,7 @@
  * Created by zhaojm on 16/11/2016.
  */
 
-import ajax_promise from '../api/ajax_promise'
+import ajax_promise from '../../api/ajax_promise'
 
 
 class CommentService {

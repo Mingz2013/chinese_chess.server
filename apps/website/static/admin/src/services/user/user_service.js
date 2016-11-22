@@ -3,7 +3,7 @@
  */
 
 
-import ajax_promise from '../api/ajax_promise'
+import ajax_promise from '../../api/ajax_promise'
 
 
 class UserService {

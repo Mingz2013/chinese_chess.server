@@ -1,8 +1,8 @@
 /**
  * Created by zhaojm on 15/11/2016.
  */
-import article_service from '../../services/article_service'
-import category_service from '../../services/category_service'
+import article_service from '../../services/blog/article_service'
+import category_service from '../../services/blog/category_service'
 
 import $ from 'jQuery'
 
