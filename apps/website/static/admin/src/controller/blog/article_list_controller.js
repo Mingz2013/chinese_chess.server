@@ -12,7 +12,7 @@ class ArticleListController {
 
 
         article_service.get_article_list().then((article_list)=> {
-            let html_str = '<table><tr><td>index</td><td>title</td><td>author</td></tr>';
+            let html_str = '<table class="table"><tr><td>index</td><td>title</td><td>author</td><td>edit</td><td>remove</td></tr>';
 
             article_list.forEach(({_id, title, author}, index) => {
 

@@ -11,7 +11,7 @@ class UserListController {
 
         user_service.get_user_list().then((user_list) => {
 
-            let html_str = '<table><tr><td>index</td><td>username</td><td>permission</td></tr>';
+            let html_str = '<table class="table"><tr><td>index</td><td>username</td><td>permission</td></tr>';
 
             user_list.forEach(({_id, username, permission}, index) => {
 
