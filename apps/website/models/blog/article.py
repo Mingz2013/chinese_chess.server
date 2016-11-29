@@ -15,23 +15,21 @@ class Article(Base0):
     def __init__(self, obj):
         Base0.__init__(self)
 
+        self.slug = require_value_from_dict(obj, 'slug')  # 文章唯一标识, 用作url
+
         self.title = require_value_from_dict(obj, 'title')
         self.content = require_value_from_dict(obj, 'content')
-        # self.summary = require_value_from_dict(obj, 'summary') # 摘要
+        self.summary = require_value_from_dict(obj, 'summary')  # 摘要
 
         # self.user_id = require_value_from_dict(obj, 'user_id')
         self.author = require_value_from_dict(obj, 'author')
 
-        self.create_time = time.time()
-        # self.update_time = time.time()
-
-        self.from_site = require_value_from_dict(obj, 'from_site')
-        self.from_url = require_value_from_dict(obj, 'from_url')
+        self.date = time.time()  # 创建时间
+        self.modified = time.time()  # 修改时间
 
         self.category = require_value_from_dict(obj, 'category')
         self.tags = require_value_from_dict(obj, 'tags')
 
         self.status = 0  # -1: 删除, 0: 草稿, 1:发布
-        # self.publish_time = None
 
-        self.view_times = 0
+        self.view_times = 0  # 访问次数
