@@ -12,6 +12,7 @@
         <div class="blog-masthead">
             <div class="container">
                 <nav class="blog-nav">
+                    <a class="blog-nav-item" href="{{ url_for('home_controller.index') }}">Home</a>
                     <a class="blog-nav-item active" href="{{ url_for('blog_controller.index') }}">Blog</a>
                     {% for category in category_list %}
                         <a class="blog-nav-item"
