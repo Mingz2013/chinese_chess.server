@@ -4,7 +4,7 @@ __author__ = 'zhaojm'
 from bson import ObjectId
 
 from ..mongo_client_db import mongo_client_db
-from ...helpers.utils import model2dict
+from ...utils.utils import model2dict
 
 
 class UserDB(object):

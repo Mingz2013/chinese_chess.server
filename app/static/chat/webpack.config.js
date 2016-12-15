@@ -1,13 +1,10 @@
-/**
- * Created by zhaojm on 13/11/2016.
- */
 var path = require('path');
 var webpack = require('webpack');
 var ROOT_PATH = path.resolve(__dirname);
 
 module.exports = {
 
-    entry: [path.resolve(ROOT_PATH, 'src/index.js')],
+    entry: [path.resolve(ROOT_PATH, 'app/index.js')],
 
     output: {
         path: path.resolve(ROOT_PATH, 'dist'),
@@ -25,7 +22,7 @@ module.exports = {
                 exclude: /node_modules/,
                 loader: "babel",
                 query: {
-                    presets: ['es2015']
+                    presets: ['es2015', 'react']
                 }
             },
             {

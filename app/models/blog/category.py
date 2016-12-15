@@ -4,7 +4,7 @@ __author__ = 'zhaojm'
 import time
 
 from ..base0 import Base0
-from ...helpers.utils import require_value_from_dict
+from ...utils.utils import require_value_from_dict
 
 
 class Category(Base0):

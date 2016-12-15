@@ -2,7 +2,7 @@
 __author__ = 'zhaojm'
 
 from ...mongo_db.user.user_db import UserDB
-from ...helpers.utils import model2dict
+from ...utils.utils import model2dict
 
 
 class UserAPIService(object):
