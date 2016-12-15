@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python apps/setup.py
+python app/setup.py
