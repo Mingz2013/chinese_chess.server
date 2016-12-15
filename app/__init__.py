@@ -1,14 +1,6 @@
 # -*- coding:utf-8 -*-
 __author__ = 'zhaojm'
 
-from flask import Flask, render_template
-
-from config import config_dict
-import sys
-
-import logging
-from logging.handlers import RotatingFileHandler
-
 
 def _import_submodules_from_package(package):
     import pkgutil
@@ -38,22 +30,21 @@ def register_routes(app):
             app.logger.error('bp is not blusprint')
 
     @app.errorhandler(403)
-    def page_403(error):
+    def error_403(error):
         app.logger.error("403")
-        return render_template('errors/403.html'), 403
+        # return render_template('errors/403.html'), 403
+        return '403', 403
 
     @app.errorhandler(404)
     def error_404(error):
         app.logger.error("404")
-        return render_template('errors/404.html'), 404
+        # return render_template('errors/404.html'), 404
+        return '404', 404
 
 
-def create_app(config_mode):
-    app = Flask(__name__)
-    app.config.from_object(config_dict[config_mode])
-    config_dict[config_mode].init_app(app)
-    app.config_mode = config_mode
-
+def register_logging(app):
+    import logging
+    from logging.handlers import RotatingFileHandler
     # 内部日志
     rotating_handler1 = RotatingFileHandler('logs/info.log', maxBytes=1 * 1024 * 1024, backupCount=5)
     rotating_handler2 = RotatingFileHandler('logs/error.log', maxBytes=1 * 1024 * 1024, backupCount=2)
@@ -69,16 +60,18 @@ def create_app(config_mode):
     if app.config.get("DEBUG"):
         # app.logger.addHandler(logging.StreamHandler())
         app.logger.setLevel(logging.DEBUG)
+    pass
 
-    # bootstrap.init_app(app)
-    # mail.init_app(app)
-    # moment.init_app(app)
-    # db.init_app(app)
+
+def create_app(config_mode):
+    from flask import Flask
+    app = Flask(__name__)
+    from config import config_dict
+    app.config.from_object(config_dict[config_mode])
+    config_dict[config_mode].init_app(app)
+    app.config_mode = config_mode
+
+    register_logging(app)
     register_routes(app)
-    # 定时器
-    # scheduler.init_app(app)
-    # scheduler.start()
-    # from apps.routes import main
-    # app.register_blueprint(main)
 
     return app
