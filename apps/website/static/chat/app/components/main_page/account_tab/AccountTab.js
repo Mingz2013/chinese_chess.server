@@ -10,7 +10,7 @@ export default class AccountTab extends Component {
         return (
             <div className="main-account">
                 <div className="account-user">
-                    赵景明
+                    mingz
                 </div>
                 <div className="account-group">
                     <div className="account-item"></div>
